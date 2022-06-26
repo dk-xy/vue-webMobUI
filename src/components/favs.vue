@@ -1,6 +1,6 @@
 <script setup>
 
-import { useLocalstorage } from '../composables/localstorage.js';
+
 import { ref, watchEffect, computed } from 'vue';
 //task envoyé dans transit
 import { tasks } from '../transit.js';
