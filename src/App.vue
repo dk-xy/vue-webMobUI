@@ -30,7 +30,7 @@ const kelvin =computed({
 
 
 const farenheit =computed({
-  get:()=> ((baseUnit.value - 273.15)/(9/5) + 32) , 
+  get:()=> ((baseUnit.value - 273.15)*(9/5) + 32) , 
   set: val => baseUnit.value =  ((val - 32) * (5/9)) + 273.15
 })
 
