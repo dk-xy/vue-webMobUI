@@ -1,9 +1,12 @@
 <script setup>
 
-
+import removeFavVue from './removeFav.vue';
 import { ref, watchEffect, computed } from 'vue';
 //task envoyé dans transit
 import { tasks } from '../transit.js';
+import removeFav from './removeFav.vue';
+
+
 
 function addTask(){
     console.log('hello')
@@ -46,7 +49,7 @@ Filtrer
 </div>
 
 
-<div v-for="task of tasksFiltered"> {{ task }} </div>
+<div v-for="(task, index) of tasksFiltered"> {{ task }} <removeFav :index="index"></removeFav></div> 
 </template>
 
 <style>
